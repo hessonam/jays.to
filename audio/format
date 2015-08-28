@@ -1,0 +1,109 @@
+{
+    "tracks": [
+        {
+            "file": "bangers.mp3",
+            "name": "Bunch of Bangers",
+            "tag": "Josh Donaldson"
+        },
+        {
+            "file": "grinders.mp3",
+            "name": "Bunch of Grinders",
+            "tag": "Troy Tulowitzki"
+        },
+        {
+            "file": "ha_got_em.mp3",
+            "name": "HA! GOT EEEM!",
+            "tag": "Jose Bautista"
+        },
+        {
+            "file": "e2h5.mp3",
+            "name": "GODDAMIT, I LOVE IT!",
+            "tag": "Danny Valencia"
+        },
+        {
+            "file": "lil_looper.mp3",
+            "name": "Lil' Looper",
+            "tag": "Bucky Martinez"
+        },
+        {
+            "file": "clutch_tulo.mp3",
+            "name": "Tulo comes clutch",
+            "tag": "Bucky Martinez"
+        },
+        {
+            "file": "deep_to_left.mp3",
+            "name": "Deep to left",
+            "tag": "Bucky Martinez"
+        },
+        {
+            "file": "if_its_fair_its_gone.mp3",
+            "name": "If it's fair, it's gone",
+            "tag": "Bucky Martinez"
+        },
+        {
+            "file": "ballgame.mp3",
+            "name": "Ballgame",
+            "tag": "Bucky Martinez"
+        },
+        {
+            "file": "forget_about_this_one.mp3",
+            "name": "Forget about this one",
+            "tag": "Bucky Martinez"
+        },
+        {
+            "file": "swing_and_a_drive.mp3",
+            "name": "Swing and a drive",
+            "tag": "Bucky Martinez"
+        },
+        {
+            "file": "bautista_gives_it_a_ride.mp3",
+            "name": "Bautista gives it a ride",
+            "tag": "Bucky Martinez"
+        },
+        {
+            "file": "lined_to_left_field.mp3",
+            "name": "Lined to left field",
+            "tag": "Bucky Martinez"
+        },
+        {
+            "file": "get_up_ball.mp3",
+            "name": "Get up ball",
+            "tag": "Bucky Martinez"
+        },
+        {
+            "file": "back_to_back.mp3",
+            "name": "Back-to-back",
+            "tag": "Bucky Martinez"
+        },
+        {
+            "file": "oh_my.mp3",
+            "name": "Oh my!",
+            "tag": "Bucky Martinez"
+        },
+        {
+            "file": "its_got_a_chance.mp3",
+            "name": "It's got a chance",
+            "tag": "Bucky Martinez"
+        },
+        {
+            "file": "goodbye_homerun.mp3",
+            "name": "Goodbye homerun",
+            "tag": "Bucky Martinez"
+        },
+        {
+            "file": "92_champs.mp3",
+            "name": "'92 champs",
+            "tag": "Vin Scully"
+        },
+        {
+            "file": "93_champs.mp3",
+            "name": "'93 champs",
+            "tag": "Tom Cheek"
+        },
+        {
+            "file": "touch_em_all_joe.mp3",
+            "name": "Touch 'em all Joe",
+            "tag": "Tom Cheek"
+        }
+    ]
+}
