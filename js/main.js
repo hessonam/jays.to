@@ -16,7 +16,7 @@ var SoundBoard = {
         for (var i = 0; i < numTracks; i++) {
             var tdEl = $(cellTemplate(tracks[i]));
 
-            if (i % 6 === 0) {
+            if (i % 5 === 0) {
                 var row = $(document.createElement("tr"));
                 table.append(row);
             }
