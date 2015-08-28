@@ -26,6 +26,11 @@
             "tag": "Munenori Kawasaki"
         },
         {
+            "file": "kawasaki_loves_bob_bannerman.mp3",
+            "name": "Kawasaki loves Bannerman",
+            "tag": "Munenori Kawasaki"
+        },
+        {
             "file": "lil_looper.mp3",
             "name": "Lil' Looper",
             "tag": "Bucky Martinez"
@@ -66,6 +71,11 @@
             "tag": "Bucky Martinez"
         },
         {
+            "file": "bautistas_amazing.mp3",
+            "name": "Bautista's amazing",
+            "tag": "Bucky Martinez"
+        },
+        {
             "file": "lined_to_left_field.mp3",
             "name": "Lined to left field",
             "tag": "Bucky Martinez"
@@ -96,9 +106,24 @@
             "tag": "Bucky Martinez"
         },
         {
+            "file": "encarnacion_song.mp3",
+            "name": "Encarnacion song",
+            "tag": "Blue Jays culture"
+        },
+        {
+            "file": "encarnacion_autotune.mp3",
+            "name": "Encarnacion autotune",
+            "tag": "Blue Jays culture"
+        },
+        {
+            "file": "OK_blue_jays.mp3",
+            "name": "OK blue jays",
+            "tag": "Blue Jays culture"
+        },
+        {
             "file": "92_champs.mp3",
             "name": "'92 champs",
-            "tag": "Vin Scully"
+            "tag": "Sean McDonough"
         },
         {
             "file": "93_champs.mp3",
