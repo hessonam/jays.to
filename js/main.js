@@ -11,8 +11,26 @@ var SoundBoard = {
 
     render: function(tracks) {
         var table = $("#soundboard");
+        var content = $("#content");
+        var volumeEl = document.getElementById("volume");
         var numTracks = tracks.length;
         var cellTemplate = Handlebars.compile($("#sound-cell").html());
+        var audioCtx = new (window.AudioContext 
+            || window.webkitAudioContext)();
+        var analyser = audioCtx.createAnalyser();
+        var smoothAnalyser = audioCtx.createAnalyser();
+        var amplifier = audioCtx.createGain();
+        var volumeControl = audioCtx.createGain();
+        var fftSize = 512;
+        analyser.fftSize = fftSize;
+        smoothAnalyser.fftSize = fftSize;
+        analyser.smoothingTimeConstant = 0;
+        smoothAnalyser.smoothingTimeConstant = 0.8;
+
+        volumeEl.oninput = function() {
+            volumeControl.gain.value = this.value;
+        }
+
         for (var i = 0; i < numTracks; i++) {
             var tdEl = $(cellTemplate(tracks[i]));
 
@@ -24,6 +42,9 @@ var SoundBoard = {
             
             var button = tdEl.find("button");
             var audioEl = tdEl.find("audio")[0];
+            var source = audioCtx.createMediaElementSource(audioEl);
+            source.connect(analyser);
+            source.connect(smoothAnalyser);
 
             audioEl.onplay = function() {
                 var _button = button;
@@ -32,7 +53,7 @@ var SoundBoard = {
                 }
             }();
 
-            audioEl.onended = function() { 
+            audioEl.onpause = function() { 
                 var _button = button;
                 return function() {
                     _button.css("background-color", "");
@@ -41,46 +62,46 @@ var SoundBoard = {
 
             button.click(function() {
                 var _audioEl = audioEl;
-                return function() { _audioEl.play() };
+                return function() { 
+                    if (_audioEl.paused) {
+                        _audioEl.play(); 
+                    } else {
+                        _audioEl.pause();
+                        _audioEl.currentTime = 0;
+                    }
+                }
             }());
         }
-        //SoundBoard.postRender();
-    },
 
-    postRender: function() {
-    
-        var audioCtx = new (window.AudioContext 
-            || window.webkitAudioContext)();
-        
-        var audioElements = document.getElementsByTagName("audio");
-        var analyser = audioCtx.createAnalyser();
-        var dataArray = new Uint8Array(analyser.fftSize);
-        console.log(dataArray);
-        
-        for (var i = 0, l = audioElements.length; i < l; i++) { 
-            var audioEl = audioElements[i];
-            var source = audioCtx.createMediaElementSource(audioEl);
-            var filter = audioCtx.createBiquadFilter();
-            filter.type = "lowpass";
-            filter.frequency.value = 500;
-            source.connect(filter);
-            filter.connect(audioCtx.destination);
+        analyser.connect(amplifier);
+        amplifier.connect(volumeControl);
+        volumeControl.connect(audioCtx.destination);
+
+        function process() {
+            var freqData = new Uint8Array(analyser.frequencyBinCount);
+            var smoothFreqData = new Uint8Array(analyser.frequencyBinCount);
+            analyser.getByteFrequencyData(freqData);
+            smoothAnalyser.getByteFrequencyData(smoothFreqData);
+            
+            var average = 0, smoothAverage = 0;
+            for (var i = 0, l = freqData.length; i < l; i++) {
+                average += parseFloat(freqData[i]);
+                smoothAverage += parseFloat(smoothFreqData[i]);
+            }
+
+            average /= freqData.length;
+            smoothAverage /= freqData.length;
+
+            if (average  > 5) {
+                amplifier.gain.value = 70 / average;
+            } 
+
+            content.css({
+                "background-size": 500 + smoothAverage * 0.8
+            });
+            
         }
-    }
+        setInterval(process, 5);
+    },
 };
-
-
-
-/*
-var source = audioCtx.createMediaElementSource(audioElement);
-var filter = audioCtx.createBiquadFilter();
-var analyser = audioCtx.createAnalyser();
-analyser.fftSize = 2048;
-var dataArray = new Float32Array(analyser.frequencyBinCount);
-analyser.getFloatTimeDomainData(dataArray);
-filter.type = "lowpass";
-filter.frequency.value = 500;
-source.connect(filter);
-filter.connect(audioCtx.destination);
-*/
 
