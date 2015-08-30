@@ -92,7 +92,7 @@ var SoundBoard = {
             average /= freqData.length;
             smoothAverage /= freqData.length;
 
-            if (average  > 5) {
+            if (average > 5) {
                 amplifier.gain.value = 70 / average;
             } 
 
@@ -101,7 +101,7 @@ var SoundBoard = {
             });
             
         }
-        setInterval(process, 5);
+        setInterval(process, 15);
     },
 };
 
