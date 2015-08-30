@@ -49,7 +49,7 @@ var SoundBoard = {
             audioEl.onplay = function() {
                 var _button = button;
                 return function() {
-                    _button.css("background-color", "#9e0");
+                    _button.css("background-color", "#5ED0FF");
                 }
             }();
 
