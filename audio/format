@@ -26,14 +26,19 @@
             "tag": "John Gibbons"
         },
         {
-            "file": "kawasaki_intro.mp3",
-            "name": "Kawasaki Intro",
-            "tag": "Munenori Kawasaki"
+            "file": "encarnacion_autotune.mp3",
+            "name": "Encarnacion autotune",
+            "tag": "Bucky Martinez"
         },
         {
-            "file": "kawasaki_loves_bob_bannerman.mp3",
-            "name": "Kawasaki loves Bannerman",
-            "tag": "Munenori Kawasaki"
+            "file": "encarnacion_autotune_2.mp3",
+            "name": "Encarnacion autotune II",
+            "tag": "Bucky Martinez"
+        },
+        {
+            "file": "encarnacion_song.mp3",
+            "name": "Encarnacion song",
+            "tag": "Jack Black"
         },
         {
             "file": "lil_looper.mp3",
@@ -43,6 +48,11 @@
         {
             "file": "clutch_tulo.mp3",
             "name": "Tulo comes clutch",
+            "tag": "Bucky Martinez"
+        },
+        {
+            "file": "tulo_clutch_2.mp3",
+            "name": "Tulo comes clutch II",
             "tag": "Bucky Martinez"
         },
         {
@@ -111,19 +121,14 @@
             "tag": "Bucky Martinez"
         },
         {
-            "file": "encarnacion_song.mp3",
-            "name": "Encarnacion song",
-            "tag": "Jack Black"
+            "file": "kawasaki_intro.mp3",
+            "name": "Kawasaki Intro",
+            "tag": "Munenori Kawasaki"
         },
         {
-            "file": "encarnacion_autotune.mp3",
-            "name": "Encarnacion autotune",
-            "tag": "Bucky Martinez"
-        },
-        {
-            "file": "encarnacion_autotune_2.mp3",
-            "name": "Encarnacion autotune II",
-            "tag": "Bucky Martinez"
+            "file": "kawasaki_loves_bob_bannerman.mp3",
+            "name": "Kawasaki loves Bannerman",
+            "tag": "Munenori Kawasaki"
         },
         {
             "file": "OK_blue_jays.mp3",
