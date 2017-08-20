@@ -1,6 +1,6 @@
 $('document').ready(function() {
     $('#sim').click(function() {
-        var req = 'https://www.propokertools.com/simulations/show?g=' + 
+        var req = 'http://www.propokertools.com/simulations/show?g=' + 
             $('#game').val();
         var hands = [
             $('#hand1').val(),
