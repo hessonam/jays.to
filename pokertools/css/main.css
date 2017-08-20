@@ -1,0 +1,28 @@
+html {
+    height: 100%;
+}
+
+body {
+}
+
+select, input {
+    display: block;
+    margin: 10px;
+}
+
+#input {
+    display: inline-block;
+    float: left;
+    width: 50%;
+}
+
+#output {
+    display: inline-block;
+    float: right;
+    width: 50%;
+}
+
+.container {
+}
+
+
